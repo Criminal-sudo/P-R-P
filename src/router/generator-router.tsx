@@ -98,10 +98,12 @@ export function filterAsyncRoute(
  * @param token
  * @returns {Promise<Router>}
  */
-export const generatorDynamicRouter = (asyncMenus: API.Menu[]) => {
+// asyncMenus: API.Menu[]
+export const generatorDynamicRouter = () => {
   try {
     // console.log('asyncMenus', asyncMenus);
-    const routeList = filterAsyncRoute(asyncMenus);
+    // const routeList = filterAsyncRoute(asyncMenus);
+    const routeList = [];
     const layout = routes.find((item) => item.name == 'Layout')!;
     // console.log(routeList, '根据后端返回的权限路由生成');
     // 给公共路由添加namePath
@@ -122,7 +124,6 @@ export const generatorDynamicRouter = (asyncMenus: API.Menu[]) => {
     layout.children = [...filterRoutes];
     // 重新添加拍平后的路由
     router.addRoute(layout);
-    console.log('所有路由', router.getRoutes());
 
     return {
       menus,

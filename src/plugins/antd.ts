@@ -22,7 +22,6 @@ import 'dayjs/locale/zh-cn';
 
 export function setupAntd(app: App<Element>) {
   app.component('AButton', AButton);
-
   app
     .use(Form)
     .use(Input)

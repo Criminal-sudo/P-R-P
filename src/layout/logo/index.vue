@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <img src="~@/assets/images/logo.png" alt="" />
-    <h2 v-show="!collapsed" class="title">One Piece</h2>
+    <!-- <h2 v-show="!collapsed" class="title">One Piece</h2> -->
   </div>
 </template>
 
@@ -23,7 +23,7 @@
 
     img {
       height: 32px;
-      margin-right: 8px;
+      margin: 20px auto;
     }
 
     .title {

@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     component: RouterView,
     meta: {
       title: t('routes.dashboard.dashboard'),
-      icon: 'icon-yibiaopan',
+      // icon: 'icon-yibiaopan',
     },
     children: [
       {
@@ -20,10 +20,22 @@ const routes: Array<RouteRecordRaw> = [
         name: `${moduleName}-welcome`,
         meta: {
           title: t('routes.dashboard.workbench'),
-          icon: 'icon-shouye',
+          // icon: 'icon-shouye',
         },
         component: () =>
           import(/* webpackChunkName: "dashboard-welcome" */ '@/views/dashboard/welcome/index.vue'),
+      },
+      {
+        path: 'fund-transfer-entry',
+        name: `${moduleName}-fund-transfer-entry`,
+        meta: {
+          title: t('routes.dashboard.fund-transfer-entry'),
+          // icon: 'icon-shouye',
+        },
+        component: () =>
+          import(
+            /* webpackChunkName: "dashboard-fund-transfer-entry" */ '@/views/dashboard/welcome/FundTransferEntry.vue'
+          ),
       },
     ],
   },

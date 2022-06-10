@@ -7,9 +7,7 @@
             <span class="title__line">我的常用菜单</span>
           </template>
           <template #extra>
-            <a href="#">
-              <SettingFilled></SettingFilled>
-            </a>
+            <SettingFilled />
           </template>
           <div class="address">
             <div class="address-name address-name__jing">
@@ -269,6 +267,11 @@
               <span class="user-action-name">技术指导</span>
             </Tag>
           </Space>
+          <img
+            style="margin-top: 20px; height: 100px; width: 100%"
+            src="~@/assets/images/support.png"
+            alt=""
+          />
         </Card>
       </Col>
     </Row>
